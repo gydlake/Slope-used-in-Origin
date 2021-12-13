@@ -1,0 +1,67 @@
+// Filename:   p2slope.ogs
+// Purpose:    Show the slope and delta_x and delta_y between two selected points in a graph.
+// How to use: In Origin software, click View:Toolbars... to open the Customize dialog box.
+//			   Click Button Groups, click New button in Button Group to open the Create Button Group dialog box.
+//			   Group Name: p2slope (or other name you like), Number of Buttons: 1, Bitmap:p2slope.bmp (or your own icon).
+//			   Click OK to return to Customize dialog box. The group name will be shown in the Groups list box.
+//			   Click p2slope in the list box, an icon is shown in Buttons. 
+//			   Click the button icon and then click Settings... in Button to open the Button Settings dialog box. 
+//			   Click Browse... in File Name to select p2slope.ogs. Section Name: Main. Keep empty in Argument List.
+//			   Write something in "Tool Tip Text:" and "Status Bar Text:" as you like. 
+//			   Click OK to return to Customize dialog box. Drag the button in Buttons to insert it to the toolbar.
+//			   Click Close to close the Customize dialog box.
+//			   When one graph is active, clicking the button in the toolbar, a Script Window: LabTalk window will appear.
+//			   Double-clicking one point then another point in the graph, the slope and delta_x and delta_x will show in Script Window.
+//			   To continue with other 2-points, you need click the button again first, then double-click the points.
+
+// Guoyong Duan, 12/13/2021.
+
+////////////////////////////////////////////////////////////////////////////////
+// Main Code 
+////////////////////////////////////////////////////////////////////////////////
+[Main]  // section name used in button settings.
+	type -a Double-click one point then another one in the graph:;
+	
+	count=1;
+	dotool 2;			// set cursor to screen reader
+
+	def showInfo          // Show the slope and delta_x and delta_y in Script Window.
+	{                        
+	   if( 2 != count )	    // First check if user has successfully selected two points
+	   return;
+	   
+			
+	   type;
+	   type Point1: ($(xpos1), $(ypos1));
+	   type Point2: ($(xpos2), $(ypos2));
+	   
+	   type ;
+	   type Delta x: $(xpos2-xpos1);
+	   type Delta y: $(ypos2-ypos1);
+	   
+	   type ;
+	   type Slope: $((ypos2-ypos1)/(xpos2-xpos1));
+	   type  ;
+	}
+
+	def pointproc 		// This routine gets the points	and store them	
+	{					 
+	   xpos$(count)=x;
+	   ypos$(count)=y;
+	   
+	   draw -n curPointv -d 2 -l -v xpos$(count);
+	   draw -n curpointh -d 2 -l -h ypos$(count);
+	   
+	   if (count == 2)
+	   {
+	   sec -p 1;
+	   label -r curPointv;
+	   label -r curPointh;
+	   }
+	   
+	   if( count >= 2 )
+		  dotool 0;		// set cursor back to pointer
+		  count+=1;
+	}
+
+
