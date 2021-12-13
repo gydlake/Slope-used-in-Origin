@@ -25,7 +25,7 @@
 	count=1;
 	dotool 2;			// set cursor to screen reader
 
-	def showInfo          // Show the slope and delta_x and delta_y in Script Window.
+	def quittoolbox          // Show the slope and delta_x and delta_y in Script Window.
 	{                        
 	   if( 2 != count )	    // First check if user has successfully selected two points
 	   return;
