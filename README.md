@@ -1,7 +1,8 @@
 # Slope-used-in-Origin
 Purpose   : Show the slope and delta_x and delta_y between two selected points in a graph. Used in Origin software.
+
 How to use: In Origin software, click View:Toolbars... to open the Customize dialog box.
-			      Click Button Groups, click New button in Button Group to open the Create Button Group dialog box.
+	    Click Button Groups, click New button in Button Group to open the Create Button Group dialog box.
 			      Group Name: p2slope (or other name you like), Number of Buttons: 1, Bitmap:p2slope.bmp (or your own icon).
 			      Click OK to return to Customize dialog box. The group name will be shown in the Groups list box.
 			      Click p2slope in the list box, an icon is shown in Buttons. 
