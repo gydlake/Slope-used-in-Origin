@@ -9,12 +9,12 @@ How to use: In Origin software, click View:Toolbars... to open the Customize dia
 	    Click the button icon and then click Settings... in Button to open the Button Settings dialog box. 
 	    Click Browse... in File Name to select p2slope.ogs. Section Name: Main. Keep empty in Argument List.
 	    Write something in "Tool Tip Text:" and "Status Bar Text:" as you like. 
-			      Click OK to return to Customize dialog box. Drag the button in Buttons to insert it to the toolbar.
-			      Click Close to close the Customize dialog box.
-			      When one graph is active, clicking the button in the toolbar, a Script Window: LabTalk window will appear.
-			      Double-clicking one point then another point in the graph (the points can be in the curve or not), 
+ 	    Click OK to return to Customize dialog box. Drag the button in Buttons to insert it to the toolbar.
+	    Click Close to close the Customize dialog box.
+	    When one graph is active, clicking the button in the toolbar, a Script Window: LabTalk window will appear.
+	    Double-clicking one point then another point in the graph (the points can be in the curve or not), 
             the slope and delta_x and delta_x will show in Script Window.
-			      To continue with other 2-points, you need click the button again first, then double-click the points.
+	    To continue with other 2-points, you need click the button again first, then double-click the points.
             
 References: https://www.originlab.com/doc/Quick-Help/Two-Points-Slope
 
