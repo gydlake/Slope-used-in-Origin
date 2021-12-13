@@ -18,4 +18,4 @@ How to use: In Origin software, click View:Toolbars... to open the Customize dia
             
 References: https://www.originlab.com/doc/Quick-Help/Two-Points-Slope
 
-It is very helpful to my research work when analysising data in Origin. Hope it is useful to other researchers.
+It is very helpful to my research work when analysing data in Origin. Hope it is useful to other researchers.
